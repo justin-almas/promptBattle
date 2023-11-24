@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'index.html'));
   });
 
+app.get('/voting', (req, res) => {
+    res.sendFile(join(__dirname, 'voting.html'));
+});
+
   io.on('connection', (socket) => {
     console.log('a user connected');
     socket.on('disconnect', () => {
